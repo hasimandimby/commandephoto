@@ -1,0 +1,18 @@
+commandephoto_admin_homepage:
+    path:     /
+    defaults: { _controller: COMMANDEPHOTOAdminBundle:Default:index }
+commandephoto_admin_photo:
+    path:     /photo
+    defaults: { _controller: COMMANDEPHOTOAdminBundle:Photo:index }
+commandephoto_photo_add:
+    path:     /photo/add
+    defaults: { _controller: COMMANDEPHOTOAdminBundle:Photo:add }
+commandephoto_photo_update:
+    path:      /photo/update/{id}
+    defaults:  { _controller: COMMANDEPHOTOAdminBundle:Photo:update, id: id  }
+commandephoto_photo_delete:
+    path:      /photo/delete/{id}
+    defaults:  { _controller: COMMANDEPHOTOAdminBundle:Photo:delete, id: id  }
+commandephoto_photo_liste:
+    path:      /photo/liste
+    defaults:  { _controller: COMMANDEPHOTOEAdminBundle:Photo:liste}

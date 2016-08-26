@@ -1,0 +1,11 @@
+commandephoto_front:
+    resource: "@COMMANDEPHOTOFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+commandephoto_admin:
+    resource: "@COMMANDEPHOTOAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
