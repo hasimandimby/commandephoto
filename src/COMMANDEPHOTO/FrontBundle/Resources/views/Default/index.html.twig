@@ -1,1 +1,100 @@
-Hello World!
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="fr-fr"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7" lang="fr-fr"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9 ie8" lang="fr-fr"><![endif]-->
+<!--[if gt IE 8]> <html class="no-js ie9" lang="fr-fr"><![endif]-->
+<html class="default" lang="fr-fr"><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Commande Photo</title>
+
+    <link rel="stylesheet" href="{{ asset('bundles/front/')}}css/bootstrap.css">
+     <link rel="stylesheet" href="{{ asset('bundles/front/')}}css/style.css">
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .background
+        {
+            background: no-repeat center fixed;
+            -webkit-background-size: cover; /* pour Chrome et Safari */
+            -moz-background-size: cover; /* pour Firefox */
+            -o-background-size: cover; /* pour Opera */
+            background-size: cover;
+
+            width: 100%;
+            height: 100%;
+            animation: changeBackground 8s infinite;
+            -webkit-animation: changeBackground 8s infinite;
+        }
+        #background1
+        {
+            position: fixed;
+
+            background-image: url("{{ asset('bundles/front/')}}images/accueil1.jpg");
+            animation-delay: 8s;
+            -webkit-animation-delay: 8s;
+        }
+        @keyframes changeBackground
+        {
+            0%  { opacity: 1; }
+            50%  { opacity: 0; }
+            100%  { opacity: 1; }
+        }
+        @-webkit-keyframes changeBackground
+        {
+            0%  { opacity: 1; }
+            50%  { opacity: 0; }
+            100%  { opacity: 1; }
+        }
+    </style>
+ <body style="background-image: url('{{ asset('bundles/front/')}}images/accueil2.jpg');" id="index" class="index show-left-column show-right-column lang_fr  fullwidth header-default double-menu">
+<div id="background1" class="background">
+
+</div>
+<div class="block myaccount">
+    <h4 class="title_block " style="display: none;"><a href="http://macommandephoto.com/mon-compte" title="Mon compte">Mon compte</a>    </h4>
+    <div class="block_content">
+        <section class="container backlogin ">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+
+                    <div class="login col-xs-12 text-center">
+                        <p class="titrelogin" style="color:#0c22f4">macommandephoto.com</p><br>
+                        <p style="font-size:40px;">E<span style="font-size:36px;">spaces parents/élèves</span></p>
+                        <p style="color:#eb1e2d">Votre login et n° de photo sont disponible auprés du responsable de la photo scolaire de votre établissement</p>
+                        <p style="font-size: 20px;">Saisissez vos identifiants</p>
+                        <form action="http://macommandephoto.com/connexion" method="post">
+                            <div class="col-xs-4"></div>
+                            <div class="col-xs-4">
+                                <div style="text-align: center;" class="form-group ">
+                                    <label for="email">					<!-- Adresse de messagerie -->
+                                        <label>Login</label>
+                                    </label>					<input class="is_required form-control" id="email" name="email" value="0004" type="text">
+
+                                    <label for="passwd">N° de photo</label>					<input class="is_required validate account_input form-control" data-validate="isPasswd" id="passwd" name="passwd" value="" type="password">
+                                </div>
+                                <p class="submit" style="text-align: right;">
+                                    <button type="submit" id="SubmitLogin" name="SubmitLogin" class="btn btn-primary">
+							<span>
+								<!-- Ouvrir une session -->
+								Connecter
+							</span>
+                                    </button>
+                                </p>
+                            </div>
+                            <div class="col-xs-4"></div>
+                        </form>
+                          </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </section>
+
+    </div>
+</div>
+</body>
+</html>

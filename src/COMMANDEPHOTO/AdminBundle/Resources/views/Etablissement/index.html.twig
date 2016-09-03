@@ -1,0 +1,6 @@
+{% extends 'baseadmin.html.twig' %}
+ {% block rigth_content %}
+     {% for article in articles %}
+         <li>{{ article.titre }}</li>
+     {% endfor %}
+ {% endblock %}

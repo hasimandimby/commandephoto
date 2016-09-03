@@ -31,23 +31,23 @@ class Photo
     /**
      * @var string
      *
-     * @ORM\Column(name="numeroportrait", type="string", length=255)
+     * @ORM\Column(name="portrait", type="string", length=255)
      */
-    private $numeroportrait;
+    private $portrait;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="nomphoto", type="string", length=255)
+     * @ORM\Column(name="classic", type="string", length=255)
      */
-    private $nomphoto;
+    private $classic;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="numerophoto", type="string", length=255)
+     * @ORM\Column(name="fun", type="string", length=255)
      */
-    private $numerophoto;
+    private $fun;
 
 
     /**
@@ -87,13 +87,13 @@ class Photo
     /**
      * Set numeroportrait
      *
-     * @param string $numeroportrait
+     * @param string $portrait
      *
      * @return Photo
      */
-    public function setNumeroportrait($numeroportrait)
+    public function setPortrait($portrait)
     {
-        $this->numeroportrait = $numeroportrait;
+        $this->portrait = $portrait;
 
         return $this;
     }
@@ -103,21 +103,21 @@ class Photo
      *
      * @return string
      */
-    public function getNumeroportrait()
+    public function getPortrait()
     {
-        return $this->numeroportrait;
+        return $this->portrait;
     }
 
     /**
      * Set nomphoto
      *
-     * @param string $nomphoto
+     * @param string $classic
      *
      * @return Photo
      */
-    public function setNomphoto($nomphoto)
+    public function setClassic($classic)
     {
-        $this->nomphoto = $nomphoto;
+        $this->classic = $classic;
 
         return $this;
     }
@@ -127,21 +127,21 @@ class Photo
      *
      * @return string
      */
-    public function getNomphoto()
+    public function getClassic()
     {
-        return $this->nomphoto;
+        return $this->classic;
     }
 
     /**
      * Set numerophoto
      *
-     * @param string $numerophoto
+     * @param string $fun
      *
      * @return Photo
      */
-    public function setNumerophoto($numerophoto)
+    public function setFun($fun)
     {
-        $this->numerophoto = $numerophoto;
+        $this->fun = $fun;
 
         return $this;
     }
@@ -151,9 +151,9 @@ class Photo
      *
      * @return string
      */
-    public function getNumerophoto()
+    public function getFun()
     {
-        return $this->numerophoto;
+        return $this->fun;
     }
 }
 

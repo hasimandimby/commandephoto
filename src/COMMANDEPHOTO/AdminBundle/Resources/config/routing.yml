@@ -15,4 +15,16 @@ commandephoto_photo_delete:
     defaults:  { _controller: COMMANDEPHOTOAdminBundle:Photo:delete, id: id  }
 commandephoto_photo_liste:
     path:      /photo/liste
-    defaults:  { _controller: COMMANDEPHOTOEAdminBundle:Photo:liste}
+    defaults:  { _controller: COMMANDEPHOTOAdminBundle:Photo:liste}
+commandephoto_etablissement_add:
+    path:     /etab/add
+    defaults: { _controller: COMMANDEPHOTOAdminBundle:Etablissement:add }
+commandephoto_etablissement_update:
+    path:      /etab/update/{id}
+    defaults:  { _controller: COMMANDEPHOTOAdminBundle:Etablissement:update, id: id  }
+commandephoto_etablissement_delete:
+    path:      /etab/delete/{id}
+    defaults:  { _controller: COMMANDEPHOTOAdminBundle:Etablissement:delete, id: id  }
+commandephoto_etablissement_liste:
+    path:      /etab/liste
+    defaults:  { _controller: COMMANDEPHOTOAdminBundle:Etablissement:liste}
