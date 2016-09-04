@@ -4,6 +4,7 @@ namespace COMMANDEPHOTO\AdminBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Classe
@@ -44,7 +45,7 @@ class Classe
     private $fichier;
 
     /**
-     * @Assert\File( maxSize = "3072k", mimeTypesMessage = "Please upload a valid imagefile")
+     * @Assert\File( maxSize = "10000k", mimeTypesMessage = "Please upload a valid imagefile")
      */
     private $imagefile;
 
@@ -195,6 +196,7 @@ class Classe
 
         // Clean up the file property as you won't need it anymore
         $this->imagefile = null;
+        return $this->getUploadRootDir()."/".$this->fichier;
     }
 
     /**

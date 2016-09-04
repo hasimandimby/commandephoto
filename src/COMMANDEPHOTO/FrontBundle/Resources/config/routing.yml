@@ -1,3 +1,6 @@
 commandephoto_front_homepage:
     path:     /
     defaults: { _controller: COMMANDEPHOTOFrontBundle:Default:index }
+commandephoto_front_commande:
+    path:     /commande
+    defaults: { _controller: COMMANDEPHOTOFrontBundle:Default:commande }

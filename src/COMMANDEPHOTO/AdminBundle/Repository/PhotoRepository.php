@@ -10,4 +10,11 @@ namespace COMMANDEPHOTO\AdminBundle\Repository;
  */
 class PhotoRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findPhoto($uai,$numero)
+    {
+        $query = $this->_em->createQuery('SELECT p FROM COMMANDEPHOTO\AdminBundle\Entity\Photo p where p.uai =:uai and p.portrait like :numero');
+        $query->setParameter('uai',$uai);
+        $query->setParameter('numero','%'.$numero.'%');
+        return $query->getSingleResult();
+    }
 }

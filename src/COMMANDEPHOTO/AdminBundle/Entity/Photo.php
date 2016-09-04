@@ -33,6 +33,7 @@ class Photo
      *
      * @ORM\Column(name="portrait", type="string", length=255)
      */
+    
     private $portrait;
 
     /**
@@ -48,6 +49,29 @@ class Photo
      * @ORM\Column(name="fun", type="string", length=255)
      */
     private $fun;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="classe", type="string", length=255)
+     */
+
+    private $classe;
+
+    /**
+     * @return string
+     */
+    public function getClasse()
+    {
+        return $this->classe;
+    }
+
+    /**
+     * @param string $classe
+     */
+    public function setClasse($classe)
+    {
+        $this->classe = $classe;
+    }
 
 
     /**

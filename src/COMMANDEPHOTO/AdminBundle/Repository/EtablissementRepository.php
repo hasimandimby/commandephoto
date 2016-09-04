@@ -10,4 +10,5 @@ namespace COMMANDEPHOTO\AdminBundle\Repository;
  */
 class EtablissementRepository extends \Doctrine\ORM\EntityRepository
 {
+  
 }
